@@ -15,7 +15,9 @@ jobs:
 
     # Error Check
     - name: Remove already exitst files
-      run: rm -rf /usr/local/bin/aws
+      run: |
+        rm -rf /usr/local/bin/aws
+        rm -rf /usr/local/bin/aws_completer
     - name: Run brew bundle
       run: brew bundle
     - name: chmod
