@@ -46,7 +46,7 @@ fi
 # sdkman
 if [ ! -d ~/.sdkman ]; then
     curl -s "https://get.sdkman.io" | bash
-    source "$HOME/.sdkman/bin/sdkman-init.sh"
+    . "$HOME/.sdkman/bin/sdkman-init.sh"
     echo "--- how to use sdkman ---"
     echo "sdk list java"
     echo "sdk install java xxx"
