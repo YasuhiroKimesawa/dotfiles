@@ -20,9 +20,9 @@ fi
 # nerd_fonts(ターミナル絵文字対応)
 if [ ! -d ~/Library/Fonts/NerdFonts ]; then
     git clone --branch=master --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-    cd nerd-fonts
+    cd nerd-fonts || exit
     ./install.sh CodeNewRoman
-    cd ..
+    cd .. || exit
     rm -rf nerd-fonts
 else
     echo "--- Already installed NerdFonts  ---"
@@ -63,11 +63,3 @@ mkdir -p ~/.config
 ln -sf ~/dotfiles/starship/starship.toml ~/.config/starship.toml
 
 echo "--- Link dotfiles is Done!  ---"
-
-nerd_fonts() {
-  git clone --branch=master --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-  cd nerd-fonts
-  ./install.sh $1  # "Source" to install Sauce Code Nerd Font
-  cd ..
-  rm -rf nerd-fonts
-}
