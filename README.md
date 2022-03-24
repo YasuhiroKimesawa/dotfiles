@@ -1,6 +1,6 @@
-![macos](https://github.com/rtakasuke/.dotfiles/workflows/macos/badge.svg)  
+![macos](https://github.com/YasuhiroKimesawa/dotfiles/workflows/macos/badge.svg)  
 
-![lint](https://github.com/rtakasuke/.dotfiles/workflows/lint/badge.svg)
+![lint](https://github.com/YasuhiroKimesawa/dotfiles/workflows/lint/badge.svg)
 
 # Setup (mac)  
 Clone this repository  
