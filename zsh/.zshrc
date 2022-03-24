@@ -1,3 +1,13 @@
+#dotfiles
+if [[ -z "${DOTFILES_HOME}" ]]; then
+  export DOTFILES_HOME=~/dotfiles
+fi
+export DOTFILES_ZSH_HOME=${DOTFILES_HOME}/zsh
+
+# check_update_dotfiles
+# shellcheck source=.zshrc.check_update_dotfiles
+source ${DOTFILES_ZSH_HOME}/.zshrc.check_update_dotfiles
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
