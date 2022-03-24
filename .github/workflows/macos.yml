@@ -14,6 +14,8 @@ jobs:
     - uses: actions/checkout@v2
 
     # Error Check
+    - name: Run brew bundle
+      run: brew bundle
     - name: chmod
       run: sudo chmod +x ${GITHUB_WORKSPACE}/setup.sh
     - name: Run setup.sh
