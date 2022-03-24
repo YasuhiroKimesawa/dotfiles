@@ -21,4 +21,4 @@ jobs:
       run: shellcheck ${GITHUB_WORKSPACE}/setup.sh --exclude=SC3037
 
     - name: Check .zshrc
-      run: shellcheck ${GITHUB_WORKSPACE}/zshrc/.zshrc --exclude=SC2148,SC1090,SC3037
+      run: shellcheck ${GITHUB_WORKSPACE}/zsh/.zshrc --exclude=SC2148,SC1090,SC3037
