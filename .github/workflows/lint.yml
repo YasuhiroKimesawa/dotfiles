@@ -18,7 +18,7 @@ jobs:
         brew install shellcheck
     # Lint check
     - name: Check setup.sh
-      run: shellcheck ${GITHUB_WORKSPACE}/setup.sh
+      run: shellcheck ${GITHUB_WORKSPACE}/setup.sh --exclude=SC3037
 
     - name: Check .zshrc
       run: shellcheck ${GITHUB_WORKSPACE}/zshrc --exclude=SC2148,SC1090,SC3037
