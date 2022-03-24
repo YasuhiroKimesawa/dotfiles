@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# CI 例外処理用
+set -e
+
 # ドットファイルをFinderに表示する
 echo "--- ドットファイルをFinderに表示する  ---"
 defaults write com.apple.Finder AppleShowAllFiles true
@@ -63,3 +66,4 @@ mkdir -p ~/.config
 ln -sf ~/dotfiles/starship/starship.toml ~/.config/starship.toml
 
 echo "--- Link dotfiles is Done!  ---"
+echo -e "\n[Finish]"
