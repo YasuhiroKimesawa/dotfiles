@@ -1,4 +1,4 @@
-Setup (mac)  
+# Setup (mac)  
 Clone this repository  
 Please clone the dotfiles directly under your home directory.
   
