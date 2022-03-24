@@ -1,0 +1,24 @@
+name: lint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-check:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install required packages
+      run: |
+        brew install shellcheck
+    # Lint check
+    - name: Check setup.sh
+      run: shellcheck ${GITHUB_WORKSPACE}/setup.sh
+
+    - name: Check .zshrc
+      run: shellcheck ${GITHUB_WORKSPACE}/zshrc --exclude=SC2148,SC1090
