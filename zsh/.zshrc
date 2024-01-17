@@ -27,3 +27,10 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 # starship
 eval "$(starship init zsh)"
+export PATH="/usr/local/opt/protobuf@3/bin:$PATH"
+
+# git on homebrew
+export PATH=/usr/local/bin/git:$PATH
+
+# flatter
+export PATH="$PATH:/Applications/flutter/bin"
