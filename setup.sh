@@ -43,6 +43,18 @@ else
     echo "--- Already installed anyenv  ---"
 fi
 
+# 先の他のenv系が入っていたら統合する
+# pyenv
+if [[ -d "~/.pyenv" ]]; then
+  mv .pyenv ~/.anyenv/envs/pyenv
+then
+fi
+# nodenv
+if [[ -d "~/.nodenv" ]]; then
+  mv .pyenv ~/.anyenv/envs/pyenv
+then
+fi
+
 # sdkman
 if [ ! -d ~/.sdkman ]; then
     curl -s "https://get.sdkman.io" | bash

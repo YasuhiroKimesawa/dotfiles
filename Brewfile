@@ -1,4 +1,5 @@
 brew "awscli"
 brew "starship"
 brew "anyenv"
+brew "direnv"
 cask "google-cloud-sdk"
